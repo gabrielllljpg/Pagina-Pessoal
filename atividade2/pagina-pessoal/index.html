@@ -1,78 +1,69 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Pessoal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <header><h1>
-        Minha Formação - Me chamo Gabriel, sou aluno do Bacharelado em Sistems de Informaação e Técnico em Informática para Internet no IF Barbacena
-    </h1></header>
 
-    <section id="Apresentação">
-        <h2>
-            Quem sou eu?
-        </h2>
-            <p>Apaixonado por tecnologia e com contato com computadores desde criança, aprendi a usar e resolver de problemas de forma autodidata, tenho como foco desenvolvimento em Banco de Dados, utilizando tecnologias como Git, Docker e Node JS para integração, também faço manutenção em computadores.</p>
-            <img src="img/127786524.jpeg" alt="Foto de Perfil">
-    </section>
-
-    <section id="Hobbies">
-        <h2>Hobbies e Interesses</h2>
-        <ul>
-            <li>Filmes</li>
-            <li>Video Game</li>
-            <li>Esportes e Artes Marciais</li>
-        </ul>
-    </section>
+    <header>
+        <h1>Minha Formação</h1>
+        <p>Me chamo Gabriel, sou aluno do Bacharelado em Sistemas de Informação e Técnico em Informática para Internet no IF Barbacena.</p>
+    </header>
 
     <nav>
         <a href="#Apresentação">Apresentação</a>
         <a href="#Hobbies">Hobbies</a>
+        <a href="#Contato">Contato</a>
     </nav>
 
-    <section id="Contato">
-        <h2>Entre em contato</h2>
+    <main>
+        <section id="Apresentação">
+            <h2>Quem sou eu?</h2>
 
-        <form>
-            <fieldset>
-                <legend>Formulário de contato</legend>
+            <p class="texto">
+                Apaixonado por tecnologia e com contato com computadores desde criança, aprendi a usar e resolver problemas de forma autodidata. Tenho como foco o desenvolvimento em Banco de Dados, utilizando tecnologias como Git, Docker e Node JS para integração. Também faço manutenção em computadores.
+            </p>
 
+            <img src="img/127786524.jpeg" alt="Foto de Perfil">
+        </section>
+
+        <section id="Hobbies">
+            <h2>Hobbies e Interesses</h2>
+
+            <ul>
+                <li>Filmes</li>
+                <li>Video Game</li>
+                <li>Esportes e Artes Marciais</li>
+            </ul>
+        </section>
+
+        <section id="Contato">
+            <h2>Contato</h2>
+
+            <form>
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
-
-                <br><br>
 
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" required>
 
-                <br><br>
-
-                <label for="assunto">Assunto:</label>
-                <input type="text" id="assunto" name="assunto">
-
-                <br><br>
-
                 <label for="mensagem">Mensagem:</label>
-                <br>
-                <textarea id="mensagem" name="mensagem" rows="5" cols="30" required></textarea>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-                <br><br>
-
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpar</button>
-            </fieldset>
-        </form>
-    </section>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
 
     <footer id="Portfólio">
-    <p>
-        Meu Portfólio
-        <a href="https://github.com/gabrielllljpg">GitHub</a>
-    </p>
+        <p>
+            Meu Portfólio:
+            <a href="https://github.com/gabrielllljpg">GitHub</a>
+        </p>
     </footer>
 
     <a href="sobre.html">Saiba mais sobre mim</a>
