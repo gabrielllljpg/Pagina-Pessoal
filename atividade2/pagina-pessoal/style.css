@@ -1,4 +1,6 @@
 
+/* Configurações gerais */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
@@ -20,29 +22,29 @@ header {
     background-color: #333333;
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 2rem;
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 h2 {
     color: #333333;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 nav {
     grid-area: nav;
     background-color: #444444;
-    padding: 15px;
+    padding: 1rem;
     text-align: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 10px;
+    margin: 0.5rem;
 }
 
 nav a:hover {
@@ -52,18 +54,19 @@ nav a:hover {
 main {
     grid-area: main;
     width: 80%;
-    margin: 20px auto;
+    max-width: 1200px;
+    margin: 1.5rem auto;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 section {
     background-color: white;
     border: 1px solid #cccccc;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 #Apresentação {
@@ -83,7 +86,7 @@ section {
 }
 
 .texto {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
@@ -92,30 +95,31 @@ ul {
 }
 
 img {
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    max-width: 100%;
+    height: auto;
     border: 2px solid #333333;
     border-radius: 10px;
 }
 
-/* Organização dos cartões com Grid */
+/* Cartões */
 
 .cartoes {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 1rem;
 }
 
 .cartao {
     background-color: #f2f2f2;
     border: 1px solid #cccccc;
-    padding: 20px;
+    padding: 1.25rem;
     border-radius: 5px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
+    gap: 0.75rem;
 }
 
 .cartao-destaque {
@@ -131,20 +135,20 @@ img {
     line-height: 1.5;
 }
 
-/* Organização das tags com Flexbox */
+/* Tags */
 
 .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 0.5rem;
 }
 
 .tags span {
     background-color: #333333;
     color: white;
-    padding: 6px 10px;
+    padding: 0.4rem 0.6rem;
     border-radius: 5px;
-    font-size: 13px;
+    font-size: 0.8rem;
 }
 
 /* Formulário */
@@ -156,16 +160,17 @@ form {
 }
 
 label {
-    margin-top: 10px;
+    margin-top: 0.6rem;
 }
 
 input, textarea {
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.6rem;
     border: 1px solid #cccccc;
     border-radius: 5px;
     font-family: Arial, sans-serif;
+    max-width: 100%;
 }
 
 input[type="submit"] {
@@ -185,7 +190,7 @@ footer {
     background-color: #333333;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 footer a {
@@ -196,13 +201,68 @@ footer a:hover {
     color: #cccccc;
 }
 
-/* Ajuste para telas menores */
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    main {
+        width: 90%;
+    }
+
+    header {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .cartoes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* Smartphones */
 
 @media (max-width: 600px) {
 
     main {
         width: 90%;
         grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    #Apresentação,
+    #Hobbies,
+    #Tecnologias,
+    #Contato {
+        grid-column: 1;
     }
 
     .cartoes {
@@ -213,15 +273,13 @@ footer a:hover {
         grid-column: 1;
     }
 
-    #Apresentação,
-    #Hobbies,
-    #Tecnologias,
-    #Contato {
-        grid-column: 1;
+    img {
+        width: 10rem;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 5px;
+    input, textarea {
+        box-sizing: border-box;
+        width: 100%;
     }
+
 }
