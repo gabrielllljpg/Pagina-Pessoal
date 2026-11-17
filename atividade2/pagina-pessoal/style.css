@@ -101,8 +101,6 @@ img {
     border-radius: 10px;
 }
 
-/* Cartões */
-
 .cartoes {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -134,8 +132,6 @@ img {
     line-height: 1.5;
 }
 
-/* Tags */
-
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -149,8 +145,6 @@ img {
     border-radius: 5px;
     font-size: 0.8rem;
 }
-
-/* Formulário */
 
 form {
     display: flex;
@@ -182,7 +176,6 @@ input[type="submit"]:hover {
     background-color: #555555;
 }
 
-/* Rodapé */
 
 footer {
     grid-area: footer;
@@ -199,8 +192,6 @@ footer a {
 footer a:hover {
     color: #cccccc;
 }
-
-/* Tablets */
 
 @media (max-width: 900px) {
 
@@ -221,8 +212,6 @@ footer a:hover {
     }
 
 }
-
-/* Smartphones */
 
 @media (max-width: 600px) {
 
